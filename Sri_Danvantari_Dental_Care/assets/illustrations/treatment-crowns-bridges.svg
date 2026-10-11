@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img"><title>Illustration of a dental bridge across three teeth and a crown placed over a prepared tooth</title><rect width="480" height="360" fill="#f1e9f8"/><circle cx="380" cy="70" r="120" fill="#e5d6f1" opacity=".7"/><circle cx="70" cy="330" r="90" fill="#e5d6f1" opacity=".55"/><g fill="none" stroke="#35164e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40,230 C120,214 360,214 440,230 L440,330 L40,330 Z" fill="#d9b3cf" stroke="none" opacity=".55"/>
+<path d="M60,150 C60,118 78,108 100,112 C114,104 126,104 140,112 C150,104 164,104 176,112 C190,104 204,104 216,112 C230,104 246,104 260,112 C282,108 300,118 300,150 C300,186 292,212 280,226 L80,226 C68,212 60,186 60,150 Z" fill="#fff"/>
+<path d="M140,116 C142,160 140,200 136,224 M220,116 C218,160 220,200 224,224" stroke="#b89ad1" stroke-width="3"/>
+<path d="M78,224 C80,262 86,296 100,304 C112,296 118,262 120,224 Z" fill="#efe6f5"/>
+<path d="M240,224 C242,262 248,296 260,304 C274,296 280,262 282,224 Z" fill="#efe6f5"/>
+<g transform="translate(370,236)"><path d="M -34,-20 C -34,-38 -20,-44 0,-44 C 20,-44 34,-38 34,-20 L 40,40 L -40,40 Z" fill="#efe6f5"/></g>
+<g transform="translate(370,112)"><path d="M -44,-36 C -44,-62 -20,-68 -6,-58 C 2,-52 10,-52 18,-58 C 32,-68 44,-58 44,-36 L 46,32 L -46,32 Z" fill="#fff"/></g>
+<path d="M370,160 L370,184 M362,176 L370,186 L378,176" stroke="#5b2c83" stroke-width="3.5"/></g></svg>

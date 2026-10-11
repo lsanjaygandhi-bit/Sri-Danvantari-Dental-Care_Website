@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="same-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://aywservzotejmoprxsir.supabase.co; connect-src 'self' https://aywservzotejmoprxsir.supabase.co; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-src 'none'">
+<title>Admin Dashboard | Sri Danvantari Dental Care</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="boot" class="boot" role="status"><img src="../assets/sri-danvantari-tooth-logo.webp" alt="" width="56" height="47"><p>Loading dashboard…</p></div>
+
+<!-- Sign in -->
+<main id="auth-view" class="auth" hidden>
+  <div class="auth-card">
+    <div class="auth-brand"><img src="../assets/sri-danvantari-tooth-logo.webp" alt="" width="56" height="47"><div><strong>Sri Danvantari Dental Care</strong><span>Admin Dashboard</span></div></div>
+    <form id="login-form" novalidate>
+      <h1>Sign in</h1>
+      <p class="muted">For authorised clinic administrators only.</p>
+      <label for="login-email">Email</label>
+      <input id="login-email" name="email" type="email" autocomplete="username" required maxlength="200">
+      <label for="login-password">Password</label>
+      <input id="login-password" name="password" type="password" autocomplete="current-password" required maxlength="200">
+      <button class="btn primary block" type="submit">Sign in</button>
+      <p class="form-msg" id="login-msg" role="alert"></p>
+      <button class="linkish" type="button" id="forgot-btn">Forgot password?</button>
+    </form>
+    <form id="forgot-form" novalidate hidden>
+      <h1>Reset password</h1>
+      <p class="muted">Enter your admin email. If it belongs to an admin account, a reset link will be sent.</p>
+      <label for="forgot-email">Email</label>
+      <input id="forgot-email" type="email" autocomplete="username" required maxlength="200">
+      <button class="btn primary block" type="submit">Send reset link</button>
+      <p class="form-msg" id="forgot-msg" role="status"></p>
+      <button class="linkish" type="button" id="back-login">Back to sign in</button>
+    </form>
+    <form id="recovery-form" novalidate hidden>
+      <h1>Choose a new password</h1>
+      <p class="muted">Use at least 10 characters, including a letter and a number.</p>
+      <label for="recovery-pass">New password</label>
+      <input id="recovery-pass" type="password" autocomplete="new-password" required minlength="10" maxlength="200">
+      <label for="recovery-pass2">Repeat new password</label>
+      <input id="recovery-pass2" type="password" autocomplete="new-password" required minlength="10" maxlength="200">
+      <button class="btn primary block" type="submit">Save new password</button>
+      <p class="form-msg" id="recovery-msg" role="alert"></p>
+    </form>
+  </div>
+  <p class="auth-foot"><a href="../index.html">← Back to website</a></p>
+</main>
+
+<!-- Dashboard -->
+<div id="app-view" class="app" hidden>
+  <header class="topbar">
+    <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+    <a class="top-brand" href="#/overview"><img src="../assets/sri-danvantari-tooth-logo.webp" alt="" width="34" height="28"><span>Sri Danvantari <b>Admin</b></span></a>
+    <div class="top-actions">
+      <a class="btn ghost small" href="../index.html" target="_blank" rel="noopener">View website ↗</a>
+      <span class="who" id="who"></span>
+      <button class="btn ghost small" type="button" id="logout-btn">Sign out</button>
+    </div>
+  </header>
+  <nav class="sidebar" id="sidebar" aria-label="Dashboard sections"></nav>
+  <main class="content" id="content" tabindex="-1"></main>
+</div>
+
+<div id="toasts" class="toasts" aria-live="polite" aria-atomic="false"></div>
+<dialog id="confirm-dialog" class="dialog">
+  <form method="dialog">
+    <h2 id="confirm-title">Are you sure?</h2>
+    <p id="confirm-text"></p>
+    <div class="dialog-actions"><button class="btn ghost" value="cancel" type="submit">Cancel</button><button class="btn danger" value="ok" id="confirm-ok" type="submit">Confirm</button></div>
+  </form>
+</dialog>
+
+<script src="../js/site-config.js"></script>
+<script src="vendor/supabase.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

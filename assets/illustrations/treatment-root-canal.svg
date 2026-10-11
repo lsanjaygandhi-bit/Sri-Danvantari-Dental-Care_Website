@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img"><title>Illustration of root canal treatment: tooth cross-section showing the pulp and root canals</title><rect width="480" height="360" fill="#f1e9f8"/><circle cx="380" cy="70" r="120" fill="#e5d6f1" opacity=".7"/><circle cx="70" cy="330" r="90" fill="#e5d6f1" opacity=".55"/><g fill="none" stroke="#35164e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(232,190) scale(1.35)">
+<path d="M -60,-70 C -60,-100 -30,-105 -15,-92 C -5,-84 5,-84 15,-92 C 30,-105 60,-100 60,-70 C 60,-40 52,-15 45,10 C 38,40 35,75 22,85 C 10,94 5,60 0,30 C -5,60 -10,94 -22,85 C -35,75 -38,40 -45,10 C -52,-15 -60,-40 -60,-70 Z" fill="#fff"/>
+<path d="M -28,-58 C -20,-46 20,-46 28,-58 C 30,-40 22,-24 12,-18 L 24,76 M -12,-18 C -22,-24 -30,-40 -28,-58 M -12,-18 L -24,76" stroke="none"/>
+<path d="M -28,-58 C -16,-44 16,-44 28,-58 C 30,-40 20,-22 10,-16 C 6,-14 -6,-14 -10,-16 C -20,-22 -30,-40 -28,-58 Z" fill="#5b2c83" stroke="none"/>
+<path d="M -9,-18 C -14,10 -20,45 -24,76" stroke="#5b2c83" stroke-width="7"/>
+<path d="M 9,-18 C 14,10 20,45 24,76" stroke="#5b2c83" stroke-width="7"/>
+</g>
+<path d="M300,60 L262,150" stroke="#9b8cb0" stroke-width="5"/>
+<rect x="292" y="34" width="44" height="22" rx="6" transform="rotate(23 314 45)" fill="#8e1b2f" stroke="none"/>
+<path d="M120,320 L360,320" stroke="#b89ad1" stroke-dasharray="2 10"/></g></svg>

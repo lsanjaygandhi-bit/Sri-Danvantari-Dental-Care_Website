@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img"><title>Illustration: a treatment plan on a clipboard</title><rect width="480" height="360" fill="#f1e9f8"/><circle cx="380" cy="70" r="120" fill="#e5d6f1" opacity=".7"/><circle cx="70" cy="330" r="90" fill="#e5d6f1" opacity=".55"/><g fill="none" stroke="#35164e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect x="150" y="56" width="180" height="250" rx="16" fill="#fff"/>
+<rect x="200" y="42" width="80" height="30" rx="10" fill="#5b2c83" stroke="none"/>
+<path d="M182,120 L298,120 M182,152 L276,152 M182,184 L290,184" stroke="#b89ad1" stroke-width="5"/>
+<g transform="translate(206,246) scale(.42)"><path d="M -60,-70 C -60,-100 -30,-105 -15,-92 C -5,-84 5,-84 15,-92 C 30,-105 60,-100 60,-70 C 60,-40 52,-15 45,10 C 38,40 35,75 22,85 C 10,94 5,60 0,30 C -5,60 -10,94 -22,85 C -35,75 -38,40 -45,10 C -52,-15 -60,-40 -60,-70 Z" fill="#e5d6f1" stroke-width="9"/></g>
+<path d="M248,240 L264,256 L298,222" stroke="#8e1b2f" stroke-width="5"/></g></svg>

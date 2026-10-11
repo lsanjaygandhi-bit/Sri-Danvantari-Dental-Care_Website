@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img"><title>Illustration: a dental chair and examination light</title><rect width="480" height="360" fill="#f1e9f8"/><circle cx="380" cy="70" r="120" fill="#e5d6f1" opacity=".7"/><circle cx="70" cy="330" r="90" fill="#e5d6f1" opacity=".55"/><g fill="none" stroke="#35164e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M118,250 C118,200 150,184 196,184 L270,184 C300,184 312,170 320,150 L340,104" stroke="#35164e" stroke-width="5"/>
+<path d="M130,250 L330,250 C350,250 360,236 352,222 L332,186" fill="none"/>
+<path d="M124,244 C124,206 150,192 196,192 L268,192 C298,192 318,176 328,150 L346,110 C352,98 370,104 366,118 L344,184 C336,212 322,236 300,244 Z" fill="#fff"/>
+<path d="M220,250 L220,300 M170,306 L270,306" stroke-width="5"/>
+<path d="M120,60 L190,90" stroke-width="5"/><ellipse cx="212" cy="102" rx="30" ry="18" transform="rotate(25 212 102)" fill="#5b2c83"/>
+<path d="M200,130 L180,170 M226,132 L222,176 M246,124 L262,162" stroke="#b89ad1" stroke-width="3" stroke-dasharray="4 8"/></g></svg>

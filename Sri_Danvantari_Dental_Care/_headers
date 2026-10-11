@@ -1,0 +1,12 @@
+# Security headers for hosts that read a _headers file (Netlify, Cloudflare Pages).
+# For Apache use the equivalent in .htaccess; for other hosts set them in the host's dashboard.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/admin/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow

@@ -1,0 +1,25 @@
+# Secrets and local configuration: never commit
+.env
+.env.*
+!.env.example
+supabase/.temp/
+Sri_Danvantari_Dental_Care/supabase/.temp/
+
+# macOS and editor files
+.DS_Store
+.vscode/
+*.swp
+
+# Finder duplicate/backup copies (e.g. "ADMIN_CMS_GUIDE 11.51.26 PM.md", "tools 11.51.26 PM/")
+* [0-9][0-9].[0-9][0-9].[0-9][0-9] [AP]M*
+* [0-9].[0-9][0-9].[0-9][0-9] [AP]M*
+
+# Local test harness output
+node_modules/
+*-results.json
+*.log
+annotate.py
+
+# Local tool folders
+.local/
+*11.51.26*

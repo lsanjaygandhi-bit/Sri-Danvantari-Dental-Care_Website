@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img"><title>Illustration of smile designing: a smile with proportion guide lines</title><rect width="480" height="360" fill="#f1e9f8"/><circle cx="380" cy="70" r="120" fill="#e5d6f1" opacity=".7"/><circle cx="70" cy="330" r="90" fill="#e5d6f1" opacity=".55"/><g fill="none" stroke="#35164e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<defs><clipPath id="mouth"><path d="M108,160 C170,140 310,140 372,160 C330,240 150,240 108,160 Z"/></clipPath></defs>
+<path d="M80,158 C140,108 200,124 240,134 C280,124 340,108 400,158 C340,268 140,268 80,158 Z" fill="#d9b3cf" stroke="#35164e"/>
+<path d="M108,160 C170,140 310,140 372,160 C330,240 150,240 108,160 Z" fill="#5b2c83" stroke="none"/>
+<g clip-path="url(#mouth)"><rect x="147.0" y="150" width="30" height="52" rx="10" fill="#fff"/><rect x="178.0" y="150" width="36" height="60" rx="10" fill="#fff"/><rect x="216.0" y="150" width="48" height="66" rx="10" fill="#fff"/><rect x="266.0" y="150" width="36" height="60" rx="10" fill="#fff"/><rect x="303.0" y="150" width="30" height="52" rx="10" fill="#fff"/><path d="M100,214 C180,196 300,196 380,214" fill="none" stroke="#35164e" stroke-width="0"/></g>
+<path d="M240,56 L240,310" stroke="#8e1b2f" stroke-width="2.5" stroke-dasharray="6 7"/>
+<path d="M120,196 C180,216 300,216 360,196" stroke="#8e1b2f" stroke-width="2.5" stroke-dasharray="6 7"/>
+<path d="M178,300 L302,300 M178,292 L178,308 M216,292 L216,308 M264,292 L264,308 M302,292 L302,308" stroke="#35164e" stroke-width="3"/></g></svg>
