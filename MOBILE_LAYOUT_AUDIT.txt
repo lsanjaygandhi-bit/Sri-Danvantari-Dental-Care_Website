@@ -1,0 +1,15 @@
+Sri Danvantari Dental Care — Mobile Layout Audit
+Date: 2026-10-11
+
+Applied:
+- Mobile-only treatment carousel rules with explicit grid-template-columns:none and one card per horizontal scroll step.
+- Cards use a consistent viewport-based width, 16:9 illustration area, and consistent content padding.
+- Heading/description word wrapping is normalized to avoid narrow, letter-by-letter wrapping.
+- Desktop layout is not targeted by this patch.
+- Existing doctor photo files and site content are preserved.
+
+Static archive checks:
+- Both mirrored website copies updated (root and nested Sri_Danvantari_Dental_Care copy).
+- ZIP archive integrity checked after writing.
+- This is a static file/CSS audit. It does not prove that every button, Supabase write, admin login, upload, or responsive rendering has passed live browser testing. Those still require testing in the deployed/local browser with the configured backend.
+- The screenshot showed the treatment cards squeezed into narrow columns. This patch targets that exact section and forces horizontal overflow on mobile.

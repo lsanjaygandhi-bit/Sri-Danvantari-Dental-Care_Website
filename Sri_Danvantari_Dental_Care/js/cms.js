@@ -443,7 +443,16 @@
 
   const docPhoto = (d, opts) => {
     if (d.photo) { const img = cardImage(d.photo, isStr(d.photo_alt) && d.photo_alt ? d.photo_alt : (opts.alt ?? d.name), opts.imgAttrs || {}); if (img) return img; }
-    return null;
+    // Keep supplied clinic portraits visible when a CMS record has no photo field.
+    // The CMS data can override these local defaults once a photo is configured in Admin.
+    const n = String(d.slug || d.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const localPhotos = [
+      { match: /k-r-srinivasan|srinivasan/, src: 'assets/dr-k-r-srinivasan-640.webp', alt: 'Dr. K. R. Srinivasan' },
+      { match: /kruparani/, src: 'assets/dr-s-kruparani.webp', alt: 'Dr. S. Kruparani' },
+      { match: /samyukta/, src: 'assets/dr-samyukta.webp', alt: 'Dr. Samyukta' }
+    ];
+    const local = localPhotos.find(p => p.match.test(n));
+    return local ? el('img', { src: local.src, alt: local.alt, loading: 'lazy', ...((opts && opts.imgAttrs) || {}) }) : null;
   };
   const docCard = (d, data, sc) => {
     const img = docPhoto(d, {});

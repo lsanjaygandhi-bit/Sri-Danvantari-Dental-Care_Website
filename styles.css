@@ -138,10 +138,10 @@ button.text-link{background:none;border:0;border-bottom:1.5px solid #d5c3e3;font
 .illus-note{margin-top:22px}
 
 /* ---------- Doctor cards ---------- */
-.doc-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:24px}
+.doc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
 .doc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-.doc-card .photo{aspect-ratio:4/3;background:linear-gradient(160deg,var(--lav),var(--lav-2))}
-.doc-card .photo img{width:100%;height:100%;object-fit:cover;object-position:58% center}
+.doc-card .photo{aspect-ratio:4/3;background:linear-gradient(160deg,var(--lav),var(--lav-2));overflow:hidden}
+.doc-card .photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .no-photo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;height:100%;color:var(--purple);text-align:center;padding:16px}
 .no-photo b{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;border:1.5px dashed #a98bc2;font:600 22px var(--serif)}
 .no-photo small{font-size:13px;color:var(--muted)}
@@ -213,7 +213,7 @@ button.text-link{background:none;border:0;border-bottom:1.5px solid #d5c3e3;font
 /* ---------- Doctor profile ---------- */
 .profile{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
 .profile .portrait img{aspect-ratio:4/4.6}
-.profile-photo-empty{aspect-ratio:4/4.6;border-radius:var(--arch);background:linear-gradient(160deg,var(--lav),var(--lav-2))}
+.profile-photo-empty,.profile-photo{aspect-ratio:4/4.6;border-radius:var(--arch);background:linear-gradient(160deg,var(--lav),var(--lav-2));overflow:hidden}.profile-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%}
 .profile .role{font-size:17px;font-weight:700;color:var(--purple);margin:10px 0 22px}
 .profile h2{font-size:24px;margin:30px 0 10px}
 .profile p,.profile li{color:var(--muted)}
@@ -364,8 +364,6 @@ body.appointment-modal-open{overflow:hidden}
   .nav a{padding:13px 12px;font-size:16px}
   .t-grid,.stories{grid-template-columns:repeat(2,minmax(0,1fr))}
   .doc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .doc-grid .doc-card:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .doc-grid .doc-card:first-child .photo{aspect-ratio:auto;min-height:100%}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
   .philosophy{grid-template-columns:1fr;gap:28px}
   .intro-grid,.why-grid,.two-col{grid-template-columns:1fr;gap:36px}
@@ -405,8 +403,6 @@ body.appointment-modal-open{overflow:hidden}
   .commitments{grid-template-columns:1fr}
   .commitments li,.commitments li:nth-child(even){padding:18px 0;border-left:0}
   .t-grid,.stories,.doc-grid{grid-template-columns:1fr}
-  .doc-grid .doc-card:first-child{display:flex}
-  .doc-grid .doc-card:first-child .photo{aspect-ratio:4/3}
   .steps{grid-template-columns:1fr}
   .spaces{grid-template-columns:1fr 1fr}
   .spaces .space-ph:first-child{grid-column:1/-1}
@@ -1006,3 +1002,226 @@ body.appointment-modal-open .chat-launcher,body.appointment-modal-open .chat-pan
 .chat-launcher{bottom:88px;background:rgba(100,42,184,.78);color:#fff;border:1px solid rgba(255,255,255,.38);box-shadow:0 10px 28px rgba(38,14,68,.22),inset 0 1px 0 rgba(255,255,255,.28);backdrop-filter:blur(12px) saturate(145%);-webkit-backdrop-filter:blur(12px) saturate(145%);}
 .chat-launcher:hover{background:rgba(112,52,198,.84);box-shadow:0 12px 30px rgba(38,14,68,.25),inset 0 1px 0 rgba(255,255,255,.32);}
 @media(max-width:700px){.chat-launcher{bottom:82px;right:16px;}}
+
+
+/* Final positioning pass: keep Chat with Us clear of the footer and keep the up-arrow visible above it. */
+.chat-launcher{bottom:82px;right:16px;z-index:110;background:rgba(100,42,184,.72);border:1px solid rgba(255,255,255,.48);box-shadow:0 10px 28px rgba(38,14,68,.22),inset 0 1px 0 rgba(255,255,255,.30);backdrop-filter:blur(14px) saturate(155%);-webkit-backdrop-filter:blur(14px) saturate(155%);}
+.chat-launcher:hover{background:rgba(112,52,198,.82);}
+.back-to-top{bottom:148px;right:20px;z-index:111;}
+/* Improve doctor portrait consistency, especially on narrow screens. */
+.doc-grid .doc-card .photo{overflow:hidden;aspect-ratio:4/3;background:var(--lav-2);}
+.doc-grid .doc-card .photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 32%;}
+.profile .photo img,.profile img{display:block;max-width:100%;height:auto;object-fit:cover;object-position:center 30%;}
+@media(max-width:760px){.chat-launcher{right:14px;bottom:78px;min-height:50px;padding:0 16px;font-size:14px;}.back-to-top{right:16px;bottom:140px;width:42px;height:42px;}.doc-grid{grid-template-columns:1fr;gap:20px;}.doc-grid .doc-card .photo{aspect-ratio:5/3;}.doc-grid .doc-card .photo img{object-position:center 28%;}.profile{grid-template-columns:1fr;gap:24px;}.profile .photo img{width:100%;max-height:420px;object-fit:cover;object-position:center 28%;}}
+@media(max-width:380px){.chat-launcher{right:10px;bottom:76px;min-height:48px;padding:0 14px;font-size:13px;}.back-to-top{right:12px;bottom:134px;width:40px;height:40px;}}
+
+
+/* Treatments for different dental needs: horizontal card scroller.
+   Keeps the existing section order and content; cards scroll left-to-right. */
+#treatments .t-grid[data-cms-collection="home-treatments"]{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(260px, 30%);
+  grid-template-columns:none;
+  gap:20px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:4px 2px 18px;
+  scroll-snap-type:x mandatory;
+  overscroll-behavior-inline:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:var(--purple-2, #8d65b5) rgba(91,44,131,.10);
+}
+#treatments .t-grid[data-cms-collection="home-treatments"]>.t-card{
+  min-width:0;
+  width:100%;
+  scroll-snap-align:start;
+}
+#treatments .t-grid[data-cms-collection="home-treatments"]:focus-visible{
+  outline:3px solid var(--purple-2, #8d65b5);
+  outline-offset:3px;
+}
+#treatments .t-grid[data-cms-collection="home-treatments"]::-webkit-scrollbar{height:8px}
+#treatments .t-grid[data-cms-collection="home-treatments"]::-webkit-scrollbar-track{background:rgba(91,44,131,.08);border-radius:99px}
+#treatments .t-grid[data-cms-collection="home-treatments"]::-webkit-scrollbar-thumb{background:var(--purple-2, #8d65b5);border-radius:99px}
+@media(max-width:760px){
+  #treatments .t-grid[data-cms-collection="home-treatments"]{grid-auto-columns:minmax(78%, 320px);gap:14px;padding-bottom:16px}
+  #treatments .t-grid[data-cms-collection="home-treatments"]>.t-card{height:100%}
+}
+@media(prefers-reduced-motion:reduce){#treatments .t-grid[data-cms-collection="home-treatments"]{scroll-behavior:auto}}
+
+/* Mobile-only compact treatment carousel. Desktop styling remains unchanged. */
+@media (max-width: 760px) {
+  #treatments .t-grid[data-cms-collection="home-treatments"] {
+    grid-auto-columns: minmax(0, 78%);
+    gap: 12px;
+    padding: 2px 2px 12px;
+  }
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card {
+    height: auto;
+    min-height: 0;
+    align-self: start;
+  }
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card > img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card figure,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-art,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-image,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-illustration,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .art,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .image,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .visual {
+    height: 180px;
+    min-height: 0;
+    max-height: 180px;
+    aspect-ratio: auto;
+    overflow: hidden;
+  }
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card > img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card figure img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-art img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-image img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-illustration img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .art img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .image img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .visual img {
+    width: 100%;
+    height: 100%;
+    max-height: 180px;
+    object-fit: contain;
+  }
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .body {
+    flex: initial;
+    padding: 14px 14px 16px;
+  }
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card h3 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card p {
+    flex: initial;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 380px) {
+  #treatments .t-grid[data-cms-collection="home-treatments"] { grid-auto-columns: 84%; }
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card > img,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card figure,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-art,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-image,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .t-illustration,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .art,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .image,
+  #treatments .t-grid[data-cms-collection="home-treatments"] > .t-card .visual { height: 155px; max-height: 155px; }
+}
+
+
+/* Final mobile audit fix: prevent the treatment cards becoming tiny columns.
+   Mobile-only; desktop layout is intentionally untouched. */
+@media screen and (max-width: 760px) {
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] {
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: min(84vw, 340px) !important;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    gap: 14px !important;
+    padding: 4px 4px 16px !important;
+    align-items: stretch;
+  }
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] > .t-card {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    scroll-snap-align: start;
+  }
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] > .t-card > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 170px;
+    object-fit: contain;
+    flex: 0 0 auto;
+  }
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] > .t-card > .body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    padding: 16px !important;
+    min-width: 0;
+  }
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] > .t-card h3 {
+    font-size: clamp(18px, 5vw, 22px);
+    line-height: 1.25;
+    overflow-wrap: normal;
+    word-break: normal;
+    margin: 0 0 10px;
+  }
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] > .t-card p {
+    font-size: 15px;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+    word-break: normal;
+    margin: 0 0 14px;
+  }
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] > .t-card .text-link {
+    margin-top: auto;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+@media screen and (max-width: 380px) {
+  #treatments .wrap > .t-grid[data-cms-collection="home-treatments"] {
+    grid-auto-columns: 86vw !important;
+  }
+}
+
+/* Compact dark glassmorphism Chat with Us launcher */
+.chat-launcher{min-height:44px;padding:0 16px 0 14px;gap:8px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(12,10,18,.70);color:#fff;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(12px) saturate(125%);-webkit-backdrop-filter:blur(12px) saturate(125%);transition:background .2s ease,transform .2s ease,border-color .2s ease}
+.chat-launcher:hover{background:rgba(12,10,18,.84);border-color:rgba(255,255,255,.45);transform:translateY(-1px)}
+.chat-launcher svg{width:18px;height:18px}
+@media(max-width:600px){.chat-launcher{right:14px;bottom:14px;min-height:40px;padding:0 13px 0 12px;gap:7px;font-size:13px}.chat-launcher svg{width:17px;height:17px}}
+/* User-approved final Chat with Us styling: compact dark purple glass, not black. */
+.chat-launcher{
+  min-height:38px !important; padding:0 12px 0 11px !important; gap:7px !important;
+  background:rgba(75, 35, 139, .76) !important; color:#fff !important;
+  border:1px solid rgba(224, 207, 255, .48) !important; border-radius:999px !important;
+  font-size:12px !important; line-height:1.1 !important;
+  box-shadow:0 5px 16px rgba(48, 18, 91, .20), inset 0 1px 0 rgba(255,255,255,.22) !important;
+  -webkit-backdrop-filter:blur(10px) saturate(135%) !important; backdrop-filter:blur(10px) saturate(135%) !important;
+}
+.chat-launcher:hover{background:rgba(64, 26, 125, .86) !important; border-color:rgba(239,230,255,.62) !important;}
+.chat-launcher svg{width:15px !important;height:15px !important;}
+@media(max-width:600px){.chat-launcher{right:12px !important;bottom:78px !important;min-height:36px !important;padding:0 11px !important;font-size:11.5px !important;gap:6px !important}.chat-launcher svg{width:14px !important;height:14px !important}}
+
+
+/* User-requested: Admin Login should be a plain header link, not a purple button. */
+.nav a.nav-admin, .nav a.nav-admin:hover, .nav a.nav-admin:focus-visible {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin-left: 0 !important;
+  font-weight: inherit !important;
+}
+.nav a.nav-admin::before, .nav a.nav-admin::after { display: none !important; }
+
+/* Keep the carousel's screen-reader labels inside the scrolling strip (prevents extra page width). */
+#treatments .t-grid[data-cms-collection="home-treatments"]{position:relative}
